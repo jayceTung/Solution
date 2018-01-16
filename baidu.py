@@ -12,4 +12,6 @@ while True:
         break
 
     print("------------------")
-    baiduApi.start_search()
+    question = baiduApi.get_question()
+    choices = baiduApi.get_choices()
+    baiduApi.count_base(question, choices)
