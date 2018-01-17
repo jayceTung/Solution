@@ -18,12 +18,12 @@ init()
 
 def pull_screenshot():
     os.system('adb shell screencap -p /sdcard/baidu_screenshot.png')
-    os.system('adb pull /sdcard/baidu_screenshot.png .')
+    # os.system('adb pull /sdcard/baidu_screenshot.png .')
 
 
 def pull_choices_screenshot():
     os.system('adb shell screencap -p /sdcard/baidu_choices_screenshot.png')
-    os.system('adb pull /sdcard/baidu_choices_screenshot.png .')
+    # os.system('adb pull /sdcard/baidu_choices_screenshot.png .')
 
 
 def get_question():
@@ -95,9 +95,9 @@ def get_choices():
     # region = img.crop((37, 350, 507, 780))
 
 
-    im = plt.imshow(img, animated=True)
-    im2 = plt.imshow(region, animated=True)
-    plt.show()
+    # im = plt.imshow(img, animated=True)
+    # im2 = plt.imshow(region, animated=True)
+    # plt.show()
 
     # 百度OCR API  ，在 https://cloud.baidu.com/product/ocr 上注册新建应用即可
     api_key = 'Aj2u7EZvVmNgBdFkDj9pcR7X'
