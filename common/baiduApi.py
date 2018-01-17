@@ -18,12 +18,12 @@ init()
 
 def pull_screenshot():
     os.system('adb shell screencap -p /sdcard/baidu_screenshot.png')
-    # os.system('adb pull /sdcard/baidu_screenshot.png .')
+    os.system('adb pull /sdcard/baidu_screenshot.png .')
 
 
 def pull_choices_screenshot():
     os.system('adb shell screencap -p /sdcard/baidu_choices_screenshot.png')
-    # os.system('adb pull /sdcard/baidu_choices_screenshot.png .')
+    os.system('adb pull /sdcard/baidu_choices_screenshot.png .')
 
 
 def get_question():
@@ -36,10 +36,10 @@ def get_question():
     # region = img.crop((75, 315, 1167, 789)) # iPhone 7P
 
     # 冲顶大会
-    region = img.crop((55, 220, 669, 390))
+    # region = img.crop((55, 220, 669, 390))
 
     # yy
-    # region = img.crop((38, 400, 680, 580))
+    region = img.crop((38, 400, 680, 580))
 
     # inkee
     # region = img.crop((37, 250, 680, 350))
@@ -86,10 +86,10 @@ def get_choices():
     # region = img.crop((75, 315, 1167, 789)) # iPhone 7P
 
     # 冲顶大会
-    region = img.crop((65, 380, 673, 720))
+    # region = img.crop((65, 380, 673, 720))
 
     # yy
-    # region = img.crop((47, 600, 510, 840))
+    region = img.crop((47, 600, 510, 840))
 
     # inkee
     # region = img.crop((37, 350, 507, 780))
@@ -122,6 +122,7 @@ def get_choices():
     result = []
     for i in r.json()['words_result']:
         word = i['words']
+        word = word[word.index("、") + 1: len(word)]
         result.append(word)
     # result = urllib.parse.quote(result)
     # webbrowser.open('https://baidu.com/s?wd=' + result)
