@@ -86,7 +86,7 @@ def get_choices():
     # region = img.crop((75, 315, 1167, 789)) # iPhone 7P
 
     # 冲顶大会
-    region = img.crop((65, 436, 673, 747))
+    region = img.crop((65, 380, 673, 720))
 
     # yy
     # region = img.crop((47, 600, 510, 840))
@@ -95,9 +95,9 @@ def get_choices():
     # region = img.crop((37, 350, 507, 780))
 
 
-    # im = plt.imshow(img, animated=True)
-    # im2 = plt.imshow(region, animated=True)
-    # plt.show()
+    im = plt.imshow(img, animated=True)
+    im2 = plt.imshow(region, animated=True)
+    plt.show()
 
     # 百度OCR API  ，在 https://cloud.baidu.com/product/ocr 上注册新建应用即可
     api_key = 'Aj2u7EZvVmNgBdFkDj9pcR7X'
