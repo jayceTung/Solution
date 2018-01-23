@@ -2,6 +2,7 @@
 import os
 import numpy as np
 import pandas as pd
+import tensorflow as tf
 
 
 class Director(object):
@@ -50,5 +51,15 @@ if __name__ == '__main__':
     print(a)
     s = pd.Series(np.array([1, 1, 2, 3, 5, 8]))
     print(s)
+    a = tf.constant(5.0)
+    b = tf.constant(6.0)
+    c = a * b
+
+    # Launch the graph in a session.
+    sess = tf.Session()
+
+    # Evaluate the tensor `c`.
+    print(sess.run(c))
+
 
 
